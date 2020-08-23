@@ -1,0 +1,79 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding-top: 6rem;
+  margin: 0 4rem;
+}
+
+.card {
+  background: #e2e2e2;
+  color: black;
+  padding: 1rem 5rem;
+  border-radius: 8px;
+}
+
+.card h1 {
+  margin-bottom: 20px;
+}
+
+.hr {
+  margin: 20px 0;
+}
+
+.card .btn {
+  --color: #360033;
+  color: var(--color);
+  background: transparent;
+  width: 8rem;
+  height: 2.3rem;
+  line-height: 2.3rem;
+  letter-spacing: 0.1rem;
+  border-radius: 8px;
+  margin-top: 20px;
+  border: 0.1rem solid var(--color);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.card .btn:hover {
+  color: #fff;
+  margin-top: 15px;
+}
+
+.card .btn span {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: var(--color);
+  transform: translateY(150%);
+  border-radius: 50%;
+  left: calc((var(--n) - 1) * 25%);
+  transition: 0.5s;
+  transition-delay: calc((var(--n) - 1) * 0.1s);
+  z-index: -1;
+}
+
+.card .btn:hover span {
+  transform: translateY(0) scale(2);
+}
+
+.card .btn span:nth-child(1) {
+  --n: 1;
+}
+
+.card .btn span:nth-child(2) {
+  --n: 2;
+}
+
+.card .btn span:nth-child(3) {
+  --n: 3;
+}
+
+.card .btn span:nth-child(4) {
+  --n: 4;
+}
